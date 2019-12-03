@@ -1,0 +1,25 @@
+simple_model:
+ joint_state_controller:
+   type: joint_state_controller/JointStateController
+   publish_rate: 20
+
+ chassis_to_wheel_fl_joint_position_controller:
+   type: effor_controllers/JointPositionController
+   joint: chassis_wheel_fl
+   pid: {p: 1.0, i: 1.0, d: 0}
+ 
+ chassis_to_wheel_fr_joint_position_controller:
+   type: effor_controllers/JointPositionController
+   joint: chassis_wheel_fr
+   pid: {p: 1.0, i: 1.0, d: 0}
+ 
+ chassis_to_wheel_rl_joint_position_controller:
+   type: effor_controllers/JointPositionController
+   joint: chassis_wheel_rl
+   pid: {p: 1.0, i: 1.0, d: 0}
+
+ chassis_to_wheel_rr_joint_position_controller:
+   type: effor_controllers/JointPositionController
+   joint: chassis_wheel_rr
+   pid: {p: 1.0, i: 1.0, d: 0}
+ 
