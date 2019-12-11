@@ -1,0 +1,35 @@
+digraph G {
+node [shape=box];
+"chassis" [label="chassis"];
+"base_link" [label="base_link"];
+"link_1" [label="link_1"];
+"link_2" [label="link_2"];
+"link_3" [label="link_3"];
+"link_4" [label="link_4"];
+"endeff" [label="endeff"];
+"wheel_fl" [label="wheel_fl"];
+"wheel_fr" [label="wheel_fr"];
+"wheel_rl" [label="wheel_rl"];
+"wheel_rr" [label="wheel_rr"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"chassis" -> "chassis__base_link" [label="xyz: 0 0 0.07 \nrpy: 0 -0 0"]
+"chassis__base_link" -> "base_link"
+"base_link" -> "base_link__link_1" [label="xyz: 0 0 0.1 \nrpy: 0 -0 0"]
+"base_link__link_1" -> "link_1"
+"link_1" -> "link_1__link_2" [label="xyz: 0 0 0.2 \nrpy: 0 -0 0"]
+"link_1__link_2" -> "link_2"
+"link_2" -> "link_2__link_3" [label="xyz: 0 0 0.2 \nrpy: 0 -0 0"]
+"link_2__link_3" -> "link_3"
+"link_3" -> "link_3__link_4" [label="xyz: 0 0 0.2 \nrpy: 0 -0 0"]
+"link_3__link_4" -> "link_4"
+"link_4" -> "link_4__endeff" [label="xyz: 0 0 0.2 \nrpy: 0 -0 0"]
+"link_4__endeff" -> "endeff"
+"chassis" -> "chassis__wheel_fl" [label="xyz: 0.27 -0.2 0 \nrpy: 0 -0 0"]
+"chassis__wheel_fl" -> "wheel_fl"
+"chassis" -> "chassis__wheel_fr" [label="xyz: 0.27 0.2 0 \nrpy: 0 -0 0"]
+"chassis__wheel_fr" -> "wheel_fr"
+"chassis" -> "chassis__wheel_rl" [label="xyz: -0.27 -0.2 0 \nrpy: 0 -0 0"]
+"chassis__wheel_rl" -> "wheel_rl"
+"chassis" -> "chassis__wheel_rr" [label="xyz: -0.27 0.2 0 \nrpy: 0 -0 0"]
+"chassis__wheel_rr" -> "wheel_rr"
+}
